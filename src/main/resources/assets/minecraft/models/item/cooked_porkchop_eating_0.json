@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "eatinganimationid:item/cooked_porkchop_eating_0"
+  }
+}

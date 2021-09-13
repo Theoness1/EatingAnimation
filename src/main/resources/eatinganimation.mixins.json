@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.tpsd.eatinganimationmod.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+    "ItemRendererMixin",
+    "OtherClientPlayerEntityMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "eatinganimationid",
+  "version": "${version}",
+
+  "name": "Eating Animation",
+  "description": "This mod adds simple sprite animation when you eat or drink something.",
+  "authors": [
+    "theone_ss", "spusik_", "PinkGoosik", "DoctorNight1"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/members/theone_ss",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/eatinganimationid/eatinganimationicon.png",
+
+  "environment": "client",
+  "entrypoints": {
+
+    "client": ["ru.tpsd.eatinganimationmod.EatingAnimationClientMod"]
+
+  },
+  "mixins": [
+    "eatinganimation.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "https://www.curseforge.com/minecraft/mc-mods/food-pluss",
+    "another-mod2": "https://www.curseforge.com/minecraft/mc-mods/pelmen-fabric"
+  }
+}
