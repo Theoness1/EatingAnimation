@@ -17,7 +17,10 @@ public class EatingAnimationClientMod implements ClientModInitializer {
             Items.APPLE, Items.BAKED_POTATO, Items.BEEF, Items.BEETROOT, Items.CARROT,
             Items.CHICKEN, Items.BREAD, Items.CHORUS_FRUIT, Items.COD, Items.COOKED_BEEF,
             Items.COOKED_CHICKEN, Items.COOKED_COD, Items.COOKED_MUTTON, Items.COOKED_PORKCHOP, Items.COOKED_RABBIT,
-            Items.COOKED_SALMON
+            Items.COOKED_SALMON, Items.COOKIE, Items.DRIED_KELP, Items.GLOW_BERRIES, Items.GOLDEN_APPLE, Items.GOLDEN_CARROT,
+            Items.HONEY_BOTTLE, Items.MELON_SLICE, Items.MILK_BUCKET, Items.MUSHROOM_STEW, Items.MUTTON, Items.POISONOUS_POTATO,
+            Items.PORKCHOP, Items.POTATO, Items.PUMPKIN_PIE, Items.RABBIT, Items.RABBIT_STEW
+
     ));
 
 

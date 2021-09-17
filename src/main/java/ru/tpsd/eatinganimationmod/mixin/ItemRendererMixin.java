@@ -32,7 +32,10 @@ public abstract class ItemRendererMixin implements SynchronousResourceReloader {
 				stack.isOf(Items.APPLE) || stack.isOf(Items.BAKED_POTATO) || stack.isOf(Items.BEEF) || stack.isOf(Items.BEETROOT) || stack.isOf(Items.BREAD)
 				|| stack.isOf(Items.CARROT) || stack.isOf(Items.CHICKEN) || stack.isOf(Items.CHORUS_FRUIT) || stack.isOf(Items.COD) || stack.isOf(Items.COOKED_BEEF)
 				|| stack.isOf(Items.COOKED_CHICKEN) || stack.isOf(Items.COOKED_COD) || stack.isOf(Items.COOKED_MUTTON) || stack.isOf(Items.COOKED_PORKCHOP)
-						|| stack.isOf(Items.COOKED_RABBIT) || stack.isOf(Items.COOKED_SALMON)?
+						|| stack.isOf(Items.COOKED_RABBIT) || stack.isOf(Items.COOKED_SALMON) || stack.isOf(Items.COOKIE) || stack.isOf(Items.DRIED_KELP) || stack.isOf(Items.GLOW_BERRIES)
+						|| stack.isOf(Items.GOLDEN_APPLE) || stack.isOf(Items.GOLDEN_CARROT) || stack.isOf(Items.HONEY_BOTTLE) || stack.isOf(Items.MELON_SLICE) || stack.isOf(Items.MILK_BUCKET)
+						|| stack.isOf(Items.MUSHROOM_STEW) || stack.isOf(Items.MUTTON) || stack.isOf(Items.POISONOUS_POTATO) || stack.isOf(Items.PORKCHOP) || stack.isOf(Items.POTATO)
+						|| stack.isOf(Items.PUMPKIN_PIE) || stack.isOf(Items.RABBIT) || stack.isOf(Items.RABBIT_STEW)?
 				this.models.getModel(stack) : bakedModel3.getOverrides().apply(bakedModel3, stack, clientWorld, entity, seed);
 
 		return bakedModel4 == null ? this.models.getModelManager().getMissingModel() : bakedModel4;

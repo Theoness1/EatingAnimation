@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "eatinganimationid:item/rabbit_stew_eating_0"
+  }
+}
