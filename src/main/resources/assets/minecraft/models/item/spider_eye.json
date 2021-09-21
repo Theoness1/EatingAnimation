@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/spider_eye"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.35
+      },
+      "model": "item/spider_eye_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.70
+      },
+      "model": "item/spider_eye_eating_1"
+    },
+
+    {
+      "predicate": {
+
+        "eating": 1,
+        "eat": 0.90
+      },
+      "model": "item/spider_eye_eating_2"
+    }
+  ]
+}
