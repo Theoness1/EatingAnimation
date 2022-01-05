@@ -24,7 +24,6 @@ public class EatingAnimationClientMod implements ClientModInitializer {
             Items.ENCHANTED_GOLDEN_APPLE
     ));
 
-
     @Override
     public void onInitializeClient() {
 
@@ -48,5 +47,6 @@ return a / 30;
                 return livingEntity.isUsingItem() && livingEntity.getActiveItem() == itemStack ? 1.0F : 0.0F;
             });
         }
+
     }
 }
