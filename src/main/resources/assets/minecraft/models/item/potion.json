@@ -1,0 +1,34 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/potion_overlay",
+    "layer1": "item/potion"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "drinking": 1,
+        "drink": 0.35
+      },
+      "model": "item/potion_overlay_drinking_0"
+    },
+    {
+      "predicate": {
+        "drinking": 1,
+        "drink": 0.70
+      },
+      "model": "item/potion_overlay_drinking_1"
+    },
+
+    {
+      "predicate": {
+
+        "drinking": 1,
+        "drink": 0.90
+      },
+      "model": "item/potion_overlay_drinking_2"
+    }
+  ]
+}

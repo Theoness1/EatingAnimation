@@ -19,7 +19,7 @@
   "environment": "client",
   "entrypoints": {
 
-    "client": ["ru.tpsd.eatinganimationmod.EatingAnimationClientMod"]
+    "client": ["ru.tpsd.eatinganimationmod.EatingAnimationClientMod", "ru.tpsd.eatinganimationmod.DrinkingAnimationClientMod"]
 
   },
   "mixins": [
