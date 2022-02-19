@@ -15,12 +15,12 @@ public class OtherClientPlayerEntityMixin {
     @Inject(at = @At("HEAD"), method = "tick")
     private void tick(CallbackInfo ci){
         if(otherClientPlayerEntity != null && otherClientPlayerEntity.getItemUseTime() > 31) {
-            if (EatingAnimationClientMod.a < 31) {
+            if (EatingAnimationClientMod.itemUseTime < 31) {
 
-                ++EatingAnimationClientMod.a;
+                ++EatingAnimationClientMod.itemUseTime;
 
             } else {
-                EatingAnimationClientMod.a = 0;
+                EatingAnimationClientMod.itemUseTime = 0;
             }
         }
     }

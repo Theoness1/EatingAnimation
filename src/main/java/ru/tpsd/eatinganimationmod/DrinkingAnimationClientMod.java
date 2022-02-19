@@ -2,21 +2,16 @@ package ru.tpsd.eatinganimationmod;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
-import net.minecraft.client.network.OtherClientPlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class DrinkingAnimationClientMod implements ClientModInitializer {
 
-    public static float a = 0;
-
-    public static final ArrayList<Item> VANILLA_DRINK = new ArrayList<>(Collections.singletonList(
-            Items.POTION
-    ));
+    public static final List<Item> VANILLA_DRINK = Collections.singletonList(Items.POTION);
 
     @Override
     public void onInitializeClient() {
@@ -27,9 +22,6 @@ public class DrinkingAnimationClientMod implements ClientModInitializer {
                     return 0.0F;
                 }
 
-                if(livingEntity instanceof OtherClientPlayerEntity && livingEntity.getItemUseTime() > 31){
-                    return a / 30;
-                }
                 return livingEntity.getActiveItem() != itemStack ? 0.0F : (itemStack.getMaxUseTime() - livingEntity.getItemUseTimeLeft()) / 30.0F;
             });
 
