@@ -2,6 +2,9 @@ package ru.tpsd.eatinganimationmod;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.network.OtherClientPlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -13,6 +16,8 @@ public class EatingAnimationClientMod implements ClientModInitializer {
 
    public static float itemUseTime = 0;
    private final List<Item> foodItems = Registry.ITEM.stream().filter(Item::isFood).toList();
+
+   // asbyth thank you bru! ඞ
 
     @Override
     public void onInitializeClient() {
@@ -35,7 +40,14 @@ public class EatingAnimationClientMod implements ClientModInitializer {
 
                 return livingEntity.isUsingItem() && livingEntity.getActiveItem() == itemStack ? 1.0F : 0.0F;
             });
+
         }
 
+        FabricLoader.getInstance().getModContainer("eatinganimationid").ifPresent(eatinganimation ->
+                ResourceManagerHelper.registerBuiltinResourcePack(EatingAnimationClientMod.locate("supporteatinganimation"), eatinganimation, ResourcePackActivationType.ALWAYS_ENABLED));
+    }
+
+    public static Identifier locate(String path) {
+        return new Identifier(path);
     }
 }
