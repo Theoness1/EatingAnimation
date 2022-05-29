@@ -27,13 +27,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.12.6",
+    "fabricloader": "*",
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "https://www.curseforge.com/minecraft/mc-mods/food-pluss",
-    "another-mod2": "https://www.curseforge.com/minecraft/mc-mods/pelmen-fabric"
   }
 }
