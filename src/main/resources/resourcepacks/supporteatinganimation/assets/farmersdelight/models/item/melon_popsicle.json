@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "farmersdelight:item/melon_popsicle"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.20
+      },
+      "model": "farmersdelight:item/melon_popsicle_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.30
+      },
+      "model": "farmersdelight:item/melon_popsicle_eating_1"
+    },
+
+    {
+      "predicate": {
+
+        "eating": 1,
+        "eat": 0.35
+      },
+      "model": "farmersdelight:item/melon_popsicle_eating_2"
+    }
+  ]
+}

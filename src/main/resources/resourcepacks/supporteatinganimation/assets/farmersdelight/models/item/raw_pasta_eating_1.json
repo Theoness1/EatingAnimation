@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "farmersdelight:item/raw_pasta_eating_1"
+  }
+}

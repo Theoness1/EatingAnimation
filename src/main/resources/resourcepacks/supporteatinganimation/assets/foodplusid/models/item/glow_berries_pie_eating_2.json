@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodplusid:item/glow_berries_pie_eating_2"
+  }
+}

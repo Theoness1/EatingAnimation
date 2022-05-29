@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "winterly:item/blue_candy_cane_eating_0"
+  }
+}

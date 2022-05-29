@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "farmersdelight:item/wheat_dough_eating_1"
+  }
+}

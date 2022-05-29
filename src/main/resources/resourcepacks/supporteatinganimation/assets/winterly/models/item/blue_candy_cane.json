@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "winterly:item/blue_candy_cane"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.20
+      },
+      "model": "winterly:item/blue_candy_cane_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.30
+      },
+      "model": "winterly:item/blue_candy_cane_eating_1"
+    },
+
+    {
+      "predicate": {
+
+        "eating": 1,
+        "eat": 0.35
+      },
+      "model": "winterly:item/blue_candy_cane_eating_2"
+    }
+  ]
+}
