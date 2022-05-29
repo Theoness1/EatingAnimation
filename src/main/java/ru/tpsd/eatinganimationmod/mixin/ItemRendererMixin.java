@@ -23,6 +23,8 @@ public abstract class ItemRendererMixin implements SynchronousResourceReloader {
 	@Final
 	private ItemModels models;
 
+	@Shadow public abstract BakedModel getModel(ItemStack stack, @Nullable World world, @Nullable LivingEntity entity, int seed);
+
 	public BakedModel getHeldItemModel_1(ItemStack stack, @Nullable World world, @Nullable LivingEntity entity, int seed) {
 
 		BakedModel bakedModel3 = this.models.getModel(stack);
@@ -37,6 +39,9 @@ public abstract class ItemRendererMixin implements SynchronousResourceReloader {
 
 	@ModifyVariable(method = "innerRenderInGui(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;IIII)V", at = @At("STORE"), ordinal = 0)
 	private BakedModel injected(BakedModel bakedModel,@Nullable LivingEntity entity, ItemStack itemStack,int seed) {
-		return bakedModel = this.getHeldItemModel_1(itemStack, (World)null, entity, seed);
+		if(itemStack.isFood()) {
+			return bakedModel = this.getHeldItemModel_1(itemStack, (World)null, entity, seed);
+		}
+			return this.getModel(itemStack, (World)null, entity, seed);
 	}
 }
