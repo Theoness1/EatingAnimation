@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.10-SNAPSHOT'
+	id 'fabric-loom' version '0.12-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -12,14 +12,6 @@ group = project.maven_group
 
 repositories {
 
-	maven {
-		url "https://api.modrinth.com/maven"
-		content { includeGroup "maven.modrinth" }
-	}
-
-	maven { url "https://maven.terraformersmc.com/" }
-
-	maven { url "https://ladysnake.jfrog.io/artifactory/mods" }
 
 }
 
@@ -30,13 +22,6 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation "maven.modrinth:winterly:0.6.0"
-	modImplementation "dev.emi:trinkets:3.3.1"
-	modImplementation "maven.modrinth:cloth-config:6.2.57+fabric"
-
-	modLocalRuntime "maven.modrinth:lazydfu:0.1.2"
-	modLocalRuntime "maven.modrinth:ferrite-core:4.2.0"
-	modLocalRuntime "maven.modrinth:starlight:1.0.2+1.18.2"
 }
 
 processResources {
