@@ -7,15 +7,19 @@ import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.network.OtherClientPlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class EatingAnimationClientMod implements ClientModInitializer {
 
    public static float itemUseTime = 0;
-   private final List<Item> foodItems = Registry.ITEM.stream().filter(Item::isFood).toList();
+   private static final ArrayList<Item> foodItems = new ArrayList<>(Registry.ITEM.stream().filter(Item::isFood).toList());
+   static {
+       foodItems.add(Items.MILK_BUCKET);
+   }
 
    // asbyth thank you bru! ඞ
 
