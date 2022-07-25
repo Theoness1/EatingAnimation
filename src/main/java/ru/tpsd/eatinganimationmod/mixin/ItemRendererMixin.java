@@ -7,7 +7,6 @@ import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.resource.SynchronousResourceReloader;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -23,6 +22,8 @@ public abstract class ItemRendererMixin implements SynchronousResourceReloader {
 	@Final
 	private ItemModels models;
 
+	@Shadow public abstract BakedModel getModel(ItemStack stack, @Nullable World world, @Nullable LivingEntity entity, int seed);
+
 	public BakedModel getHeldItemModel_1(ItemStack stack, @Nullable World world, @Nullable LivingEntity entity, int seed) {
 
 		BakedModel bakedModel3 = this.models.getModel(stack);
@@ -37,6 +38,9 @@ public abstract class ItemRendererMixin implements SynchronousResourceReloader {
 
 	@ModifyVariable(method = "innerRenderInGui(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;IIII)V", at = @At("STORE"), ordinal = 0)
 	private BakedModel injected(BakedModel bakedModel,@Nullable LivingEntity entity, ItemStack itemStack,int seed) {
-		return bakedModel = this.getHeldItemModel_1(itemStack, (World)null, entity, seed);
+		if(itemStack.isFood()){
+			return this.getHeldItemModel_1(itemStack, null, entity, seed);
+		}
+		return getModel(itemStack, null, entity, seed);
 	}
 }
