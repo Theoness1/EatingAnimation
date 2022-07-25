@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "expandeddelight:item/asparagus_and_bacon_cheesy"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.35
+      },
+      "model": "expandeddelight:item/asparagus_and_bacon_cheesy_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.70
+      },
+      "model": "expandeddelight:item/asparagus_and_bacon_cheesy_eating_1"
+    },
+
+    {
+      "predicate": {
+
+        "eating": 1,
+        "eat": 0.90
+      },
+      "model": "expandeddelight:item/asparagus_and_bacon_cheesy_eating_2"
+    }
+  ]
+}

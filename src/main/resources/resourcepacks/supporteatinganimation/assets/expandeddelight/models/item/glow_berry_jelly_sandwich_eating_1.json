@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "expandeddelight:item/glow_berry_jelly_sandwich_eating_1"
+  }
+}

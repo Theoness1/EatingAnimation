@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "expandeddelight:item/cheese_slice_eating_2"
+  }
+}
