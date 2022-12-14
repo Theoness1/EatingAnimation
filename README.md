@@ -1,4 +1,4 @@
 Be respectful.
 Peace ඞ
 
-https://www.curseforge.com/minecraft/mc-mods/eating-animation-fabric#c238
+https://www.curseforge.com/minecraft/mc-mods/eating-animation-fabric
