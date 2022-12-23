@@ -9,14 +9,14 @@ import net.minecraft.client.network.OtherClientPlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 
 import java.util.ArrayList;
 
 public class EatingAnimationClientMod implements ClientModInitializer {
 
    public static float itemUseTime = 0;
-   private static final ArrayList<Item> foodItems = new ArrayList<>(Registry.ITEM.stream().filter(Item::isFood).toList());
+   private static final ArrayList<Item> foodItems = new ArrayList<>(Registries.ITEM.stream().filter(Item::isFood).toList());
    static {
        foodItems.add(Items.MILK_BUCKET);
    }
