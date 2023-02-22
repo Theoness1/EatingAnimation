@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "betternether:item/herbal_medicine"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.35
+      },
+      "model": "betternether:item/herbal_medicine_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.70
+      },
+      "model": "betternether:item/herbal_medicine_eating_1"
+    },
+
+    {
+      "predicate": {
+
+        "eating": 1,
+        "eat": 0.90
+      },
+      "model": "betternether:item/herbal_medicine_eating_2"
+    }
+  ]
+}
