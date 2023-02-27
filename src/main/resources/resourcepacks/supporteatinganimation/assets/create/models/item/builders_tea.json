@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "create:item/builders_tea"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "drinking": 1,
+        "drink": 0.35
+      },
+      "model": "create:item/builders_tea_drinking_0"
+    },
+    {
+      "predicate": {
+        "drinking": 1,
+        "drink": 0.70
+      },
+      "model": "create:item/builders_tea_drinking_1"
+    },
+
+    {
+      "predicate": {
+
+        "drinking": 1,
+        "drink": 0.90
+      },
+      "model": "create:item/builders_tea_drinking_2"
+    }
+  ]
+}
