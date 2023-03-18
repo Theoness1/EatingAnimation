@@ -37,7 +37,7 @@ public abstract class ItemRendererMixin implements SynchronousResourceReloader {
 	}
 
 	@ModifyVariable(method = "innerRenderInGui(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;IIII)V", at = @At("STORE"), ordinal = 0)
-	private BakedModel injected(BakedModel bakedModel,@Nullable LivingEntity entity, ItemStack itemStack,int seed) {
+	private BakedModel injected(BakedModel bakedModel, @Nullable LivingEntity entity, ItemStack itemStack, int seed) {
 		if(itemStack.isFood()){
 			return this.getHeldItemModel_1(itemStack, null, entity, seed);
 		}
