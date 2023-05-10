@@ -4,18 +4,15 @@ package ru.tpsd.eatinganimationmod.mixin;
 import net.minecraft.client.render.item.ItemModels;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.resource.SynchronousResourceReloader;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ItemRenderer.class)
 public abstract class ItemRendererMixin implements SynchronousResourceReloader {
@@ -23,20 +20,17 @@ public abstract class ItemRendererMixin implements SynchronousResourceReloader {
 	@Final
 	private ItemModels models;
 
-	public BakedModel getHeldItemModel_1(ItemStack stack, @Nullable World world, @Nullable LivingEntity entity, int seed) {
+	@Shadow
+	protected abstract void renderGuiItemModel(ItemStack stack, int x, int y, BakedModel model);
 
-		BakedModel bakedModel3 = this.models.getModel(stack);
+	@Inject(method = "innerRenderInGui(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;II)V", at = @At("HEAD"), cancellable = true)
+	void innerRenderInGui(LivingEntity entity, ItemStack stack, int x, int y, CallbackInfo ci) {
+		if (!stack.isEmpty() && stack.isFood()) {
+			BakedModel bakedModel = this.models.getModel(stack);
 
-		ClientWorld clientWorld = world instanceof ClientWorld ? (ClientWorld)world : null;
-		BakedModel bakedModel4 = stack.isFood()
-			? this.models.getModel(stack)
-			: bakedModel3.getOverrides().apply(bakedModel3, stack, clientWorld, entity, seed);
+			this.renderGuiItemModel(stack, x, y, bakedModel);
 
-		return bakedModel4 == null ? this.models.getModelManager().getMissingModel() : bakedModel4;
-	}
-
-	@ModifyVariable(method = "innerRenderInGui(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;IIII)V", at = @At("STORE"), ordinal = 0)
-	private BakedModel injected(BakedModel bakedModel,@Nullable LivingEntity entity, ItemStack itemStack,int seed) {
-		return bakedModel = this.getHeldItemModel_1(itemStack, (World)null, entity, seed);
+			ci.cancel();
+		}
 	}
 }

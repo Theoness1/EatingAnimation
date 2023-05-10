@@ -17,7 +17,7 @@ public class DrinkingAnimationClientMod implements ClientModInitializer {
     public void onInitializeClient() {
 
         for(Item item : VANILLA_DRINK) {
-            FabricModelPredicateProviderRegistry.register(item, new Identifier("drink"), (itemStack, clientWorld, livingEntity, i) -> {
+            FabricModelPredicateProviderRegistry.register(item, new Identifier("drink"), (itemStack, clientWorld, livingEntity) -> {
                 if (livingEntity == null) {
                     return 0.0F;
                 }
@@ -25,7 +25,7 @@ public class DrinkingAnimationClientMod implements ClientModInitializer {
                 return livingEntity.getActiveItem() != itemStack ? 0.0F : (itemStack.getMaxUseTime() - livingEntity.getItemUseTimeLeft()) / 30.0F;
             });
 
-            FabricModelPredicateProviderRegistry.register(item, new Identifier("drinking"), (itemStack, clientWorld, livingEntity, i) -> {
+            FabricModelPredicateProviderRegistry.register(item, new Identifier("drinking"), (itemStack, clientWorld, livingEntity) -> {
                 if (livingEntity == null) {
                     return 0.0F;
                 }

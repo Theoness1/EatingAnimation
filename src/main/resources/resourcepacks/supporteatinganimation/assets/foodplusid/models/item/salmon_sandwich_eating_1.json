@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "foodplusid:item/salmon_sandwich_eating_1"
-  }
-}
