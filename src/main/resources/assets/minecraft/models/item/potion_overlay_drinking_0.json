@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "eatinganimationid:item/potion_overlay_drinking_0",
-    "layer1": "item/potion"
+    "layer1": "eatinganimationid:item/potion_drinking"
   }
 }
