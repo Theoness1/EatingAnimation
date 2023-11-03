@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "naturalist:item/venison"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.35
+      },
+      "model": "naturalist:item/venison_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.70
+      },
+      "model": "naturalist:item/venison_eating_1"
+    },
+
+    {
+      "predicate": {
+
+        "eating": 1,
+        "eat": 0.90
+      },
+      "model": "naturalist:item/venison_eating_2"
+    }
+  ]
+}
