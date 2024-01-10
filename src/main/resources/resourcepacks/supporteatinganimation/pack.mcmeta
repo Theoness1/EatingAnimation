@@ -1,6 +1,10 @@
 {
   "pack": {
-    "pack_format": 15,
-    "description": "\u00A7c\u00A7lEating Animation\n\u00A7c\u00A7lmods support"
+    "pack_format": 22,
+    "supported_formats": {
+      "min_inclusive": 18,
+      "max_inclusive": 22
+    },
+    "description": "§c§lEating Animation mods support"
   }
 }
