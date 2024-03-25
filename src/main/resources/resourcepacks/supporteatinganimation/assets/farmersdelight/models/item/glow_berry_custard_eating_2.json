@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "farmersdelight:item/glow_berry_custard_eating_2"
+  }
+}
