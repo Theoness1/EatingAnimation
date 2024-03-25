@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hybrid-aquatic:item/cooked_lobster_eating_0"
+  }
+}

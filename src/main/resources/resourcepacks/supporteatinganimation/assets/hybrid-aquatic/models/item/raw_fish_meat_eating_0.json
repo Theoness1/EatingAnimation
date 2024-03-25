@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hybrid-aquatic:item/raw_fish_meat_eating_0"
+  }
+}
