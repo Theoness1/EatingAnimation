@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "the_bumblezone:item/bee_bread"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.20
+      },
+      "model": "the_bumblezone:item/bee_bread_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.30
+      },
+      "model": "the_bumblezone:item/bee_bread_eating_1"
+    },
+
+    {
+      "predicate": {
+
+        "eating": 1,
+        "eat": 0.35
+      },
+      "model": "the_bumblezone:item/bee_bread_eating_2"
+    }
+  ]
+}
