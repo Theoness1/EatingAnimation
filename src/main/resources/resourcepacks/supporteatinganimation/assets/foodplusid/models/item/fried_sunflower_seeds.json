@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodplusid:item/fried_sunflower_seeds"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.20
+      },
+      "model": "foodplusid:item/fried_sunflower_seeds_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.30
+      },
+      "model": "foodplusid:item/fried_sunflower_seeds_eating_1"
+    },
+
+    {
+      "predicate": {
+
+        "eating": 1,
+        "eat": 0.35
+      },
+      "model": "foodplusid:item/fried_sunflower_seeds_eating_2"
+    }
+  ]
+}

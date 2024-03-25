@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "foodplusid:item/fried_pumpkin_seed_eating_2"
+  }
+}
