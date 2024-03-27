@@ -1,0 +1,33 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "cinderscapes:item/bramble_berries"
+  },
+
+  "overrides": [
+
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.15
+      },
+      "model": "cinderscapes:item/bramble_berries_eating_0"
+    },
+    {
+      "predicate": {
+        "eating": 1,
+        "eat": 0.30
+      },
+      "model": "cinderscapes:item/bramble_berries_eating_1"
+    },
+
+    {
+      "predicate": {
+
+        "eating": 1,
+        "eat": 0.40
+      },
+      "model": "cinderscapes:item/bramble_berries_eating_2"
+    }
+  ]
+}
