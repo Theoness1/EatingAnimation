@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "regions_unexplored:item/hanging_earlight_fruit_eating_0"
+  }
+}

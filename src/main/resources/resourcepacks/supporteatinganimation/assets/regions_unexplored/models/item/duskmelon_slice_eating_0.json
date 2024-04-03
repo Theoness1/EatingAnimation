@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "regions_unexplored:item/duskmelon_slice_eating_0"
+  }
+}
