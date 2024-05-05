@@ -1,7 +1,7 @@
 package ru.tpsd.eatinganimationmod;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
+import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
@@ -17,7 +17,7 @@ public class DrinkingAnimationClientMod implements ClientModInitializer {
     public void onInitializeClient() {
 
         for(Item item : VANILLA_DRINK) {
-            FabricModelPredicateProviderRegistry.register(item, new Identifier("drink"), (itemStack, clientWorld, livingEntity, i) -> {
+            ModelPredicateProviderRegistry.register(item, new Identifier("drink"), (itemStack, clientWorld, livingEntity, i) -> {
                 if (livingEntity == null) {
                     return 0.0F;
                 }
@@ -25,7 +25,7 @@ public class DrinkingAnimationClientMod implements ClientModInitializer {
                 return livingEntity.getActiveItem() != itemStack ? 0.0F : (itemStack.getMaxUseTime() - livingEntity.getItemUseTimeLeft()) / 30.0F;
             });
 
-            FabricModelPredicateProviderRegistry.register(item, new Identifier("drinking"), (itemStack, clientWorld, livingEntity, i) -> {
+            ModelPredicateProviderRegistry.register(item, new Identifier("drinking"), (itemStack, clientWorld, livingEntity, i) -> {
                 if (livingEntity == null) {
                     return 0.0F;
                 }

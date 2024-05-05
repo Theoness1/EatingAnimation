@@ -18,18 +18,19 @@
 
   "environment": "client",
   "entrypoints": {
-
-    "client": ["ru.tpsd.eatinganimationmod.EatingAnimationClientMod", "ru.tpsd.eatinganimationmod.DrinkingAnimationClientMod"]
-
+    "client": [
+      "ru.tpsd.eatinganimationmod.EatingAnimationClientMod",
+      "ru.tpsd.eatinganimationmod.DrinkingAnimationClientMod"
+    ]
   },
   "mixins": [
     "eatinganimation.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": "*",
+    "fabricloader": ">=0.15.10",
     "fabric-api": "*",
-    "minecraft": ">=1.20",
-    "java": ">=17"
+    "minecraft": "~1.20.6",
+    "java": ">=21"
   }
 }
