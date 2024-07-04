@@ -1,6 +1,9 @@
 {
   "pack": {
     "pack_format": 34,
-    "description": "\u00A7c\u00A7lEating Animation\n\u00A7c\u00A7lmods support"
+    "description": {
+      "translate": "resourcepack.eatinganimationid.name",
+      "fallback": "\u00A7c\u00A7lEating Animation\n\u00A7c\u00A7lmods support"
+    }
   }
 }
