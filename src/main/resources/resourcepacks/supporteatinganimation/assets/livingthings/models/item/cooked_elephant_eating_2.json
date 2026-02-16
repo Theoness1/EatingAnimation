@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "livingthings:item/cooked_elephant_eating_2"
+  }
+}
